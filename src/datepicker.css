@@ -1,0 +1,108 @@
+.dp-close {
+    display: none
+}
+
+.dp-content {
+    background: rgb(255,255,255);
+    box-shadow: 0 2px 6px rgb(200,200,200);
+    box-sizing: border-box;
+    color: rgb(80,80,80);
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 12px;
+    user-select: none;
+    z-index: 9999;
+}
+
+.dp-content * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.dp-content table {
+    border: 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.dp-prev {
+    text-align: left;
+}
+
+.dp-view-date {
+    text-align: center;
+}
+
+.dp-next {
+    text-align: right;
+}
+
+.dp-prev button,
+.dp-next button {
+    background: transparent;
+    border: none;
+    color: rgb(80,80,80);
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+}
+.dp-prev button:disabled,
+.dp-next button:disabled {
+    color: rgb(220,220,220);
+    cursor: default;
+}
+
+.dp-select-year,
+.dp-select-month {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: none;
+    color: rgb(80,80,80);
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 2px;
+    outline: none;
+    text-align: center;
+}
+.dp-select-year::-ms-expand,
+.dp-select-month::-ms-expand {
+    display: none;
+}
+.dp-select-month {
+    direction: rtl;
+}
+.dp-select-month > option {
+    direction: ltr;
+}
+
+.dp-calendar th,
+.dp-calendar td {
+    cursor: default;
+    height: 30px;
+    text-align: center;
+    width: 30px;
+}
+
+.dp-days td[data-date]:hover {
+    color: rgb(0,0,0);
+    cursor: pointer;
+}
+.dp-days td[data-date]:not(.dp-day-current):hover {
+    background: rgb(230,230,230);
+}
+
+.dp-days .dp-day-current {
+    background: rgb(32,160,255);
+    border-radius: 15px;
+    color: rgb(255,255,255);
+}
+
+.dp-days .dp-day-other-month,
+.dp-days td:not([data-date]) {
+    color: rgb(220,220,220);
+}
